@@ -1,0 +1,35 @@
+﻿@page
+@model AspCore_Auth.Pages.RegisterModel
+@{
+}
+<div class="container">
+    <div class="row justify-content-center align-items-center" >
+       <div class="col-sm-12 col-md-12 col-lg-4">
+            <h1 class="mb-3"> Đăng ký</h1>
+            <form method="post">
+
+                <div class=" mb-3">
+                    <label class="form-label" asp-for="Model.Email">Địa chỉ Email:</label>
+                    <input type="text" asp-for="Model.Email" class="form-control" />
+                    <span asp-validation-for="Model.Email" class="text-danger"></span>
+                </div>
+                <div class=" mb-3">
+                    <label class="form-label" asp-for="Model.Password">Mật khẩu:</label>
+                    <input type="password" asp-for="Model.Password" class="form-control" />
+                    <span asp-validation-for="Model.Password" class="text-danger"></span>
+                </div>
+                <div class=" mb-3">
+                    <label class="form-label" asp-for="Model.confirmPassword">Nhập lại mật khẩu:</label>
+                    <input type="password" asp-for="Model.confirmPassword" class="form-control" />
+
+                </div>
+                <a class="nav-link justify-content-end d-flex" asp-area="" asp-page="/Login">Đã có tài khoản</a>
+                <div class=" mb-3">
+                    <button type="submit" class="btn btn-primary">Đăng ký</button>
+                </div>
+                <div asp-validation-summary="All" class=" text-danger">
+                </div>
+            </form>
+       </div>
+    </div>
+</div>
